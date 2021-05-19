@@ -91,5 +91,11 @@
   <ItemGroup>
     <Folder Include="Image\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuanLyThuChi.Data\QuanLyThuChi.Data.csproj">
+      <Project>{bd4811f7-bfe5-46ec-b954-ff7e688ea716}</Project>
+      <Name>QuanLyThuChi.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
