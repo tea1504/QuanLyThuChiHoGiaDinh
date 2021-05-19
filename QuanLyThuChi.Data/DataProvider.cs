@@ -10,7 +10,14 @@ namespace QuanLyThuChi.Data
 {
     public class DataProvider
     {
+        private static DataProvider instance;
         private string conn = @"Data Source=.;Initial Catalog=QL_ThuChi;Integrated Security=True";
+
+        public static DataProvider Instance {
+            get { if (instance == null) instance = new DataProvider(); return instance; }
+            private set { instance = value; }
+        }
+        public DataProvider() { }
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();

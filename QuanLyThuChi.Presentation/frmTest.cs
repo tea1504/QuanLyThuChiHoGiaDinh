@@ -21,9 +21,8 @@ namespace QuanLyThuChi.Presentation
 
         private void frmTest_Load(object sender, EventArgs e)
         {
-            string query = "select * from LOAICHI where MALOAICHI = @MaLoaiChi";
-            DataProvider dataProvider = new DataProvider();
-            dgvTest.DataSource = dataProvider.ExecuteQuery(query, new object[] { "1" });
+            string query = "select * from LOAICHI";
+            dgvTest.DataSource = DataProvider.Instance.ExecuteQuery(query);
         }
 
     }
