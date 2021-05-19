@@ -58,6 +58,12 @@
     <Compile Include="frmNhapThuChi.Designer.cs">
       <DependentUpon>frmNhapThuChi.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmMain.resx">
@@ -65,6 +71,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhapThuChi.resx">
       <DependentUpon>frmNhapThuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,6 +99,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Image\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuanLyThuChi.Data\QuanLyThuChi.Data.csproj">
+      <Project>{bd4811f7-bfe5-46ec-b954-ff7e688ea716}</Project>
+      <Name>QuanLyThuChi.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
