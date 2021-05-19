@@ -10,17 +10,12 @@ using System.Windows.Forms;
 
 namespace QuanLyThuChi.Presentation
 {
-    public partial class frmMain : Form
+    public partial class frmNhapThuChi : Form
     {
-        public frmMain()
+        public frmNhapThuChi()
         {
             InitializeComponent();
         }
 
-        private void mnuNhapThuChi_Click(object sender, EventArgs e)
-        {
-            frmNhapThuChi frmTC = new frmNhapThuChi();
-            frmTC.ShowDialog();
-        }
     }
 }

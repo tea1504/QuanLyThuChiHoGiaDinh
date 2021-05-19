@@ -29,6 +29,7 @@ namespace QuanLyThuChi.Presentation
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuDanhMuc = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuCapNhat = new System.Windows.Forms.ToolStripMenuItem();
@@ -142,6 +143,7 @@ namespace QuanLyThuChi.Presentation
             this.mnuNhapThuChi.Name = "mnuNhapThuChi";
             this.mnuNhapThuChi.Size = new System.Drawing.Size(199, 34);
             this.mnuNhapThuChi.Text = "Nhập thu chi";
+            this.mnuNhapThuChi.Click += new System.EventHandler(this.mnuNhapThuChi_Click);
             // 
             // mnuTKTCThanhVien
             // 
@@ -207,6 +209,7 @@ namespace QuanLyThuChi.Presentation
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
