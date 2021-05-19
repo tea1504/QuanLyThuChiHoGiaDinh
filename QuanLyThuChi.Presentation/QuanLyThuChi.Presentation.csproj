@@ -101,6 +101,10 @@
     <Folder Include="Image\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\QuanLyThuChi.Business\QuanLyThuChi.Business.csproj">
+      <Project>{f30c3398-ad05-4547-90f1-9502b0b34a7a}</Project>
+      <Name>QuanLyThuChi.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\QuanLyThuChi.Data\QuanLyThuChi.Data.csproj">
       <Project>{bd4811f7-bfe5-46ec-b954-ff7e688ea716}</Project>
       <Name>QuanLyThuChi.Data</Name>
