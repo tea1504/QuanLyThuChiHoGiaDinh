@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DataProvider.cs" />
+    <Compile Include="LoaiThu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThanhVien.cs" />
   </ItemGroup>
