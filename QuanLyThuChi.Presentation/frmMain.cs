@@ -22,5 +22,11 @@ namespace QuanLyThuChi.Presentation
             frmNhapThuChi frmTC = new frmNhapThuChi();
             frmTC.ShowDialog();
         }
+
+        private void mnuThanhVien_Click(object sender, EventArgs e)
+        {
+            frmQuanLyThanhVien frmQLTV = new frmQuanLyThanhVien();
+            frmQLTV.ShowDialog();
+        }
     }
 }

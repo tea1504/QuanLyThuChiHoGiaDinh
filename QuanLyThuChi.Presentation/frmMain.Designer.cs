@@ -32,16 +32,16 @@ namespace QuanLyThuChi.Presentation
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuDanhMuc = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuCapNhat = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuTimKiem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuBaoCao = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuLoaiThu = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuLoaiChi = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuThanhVien = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTaiKhoan = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuCapNhat = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuNhapThuChi = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuTimKiem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTKTCThanhVien = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTKTCTheLoai = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuBaoCao = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTCTuan = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTCThang = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTCNam = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,37 +78,6 @@ namespace QuanLyThuChi.Presentation
             this.mnuDanhMuc.Size = new System.Drawing.Size(135, 35);
             this.mnuDanhMuc.Text = "Danh mục";
             // 
-            // mnuCapNhat
-            // 
-            this.mnuCapNhat.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuNhapThuChi});
-            this.mnuCapNhat.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnuCapNhat.Name = "mnuCapNhat";
-            this.mnuCapNhat.Size = new System.Drawing.Size(121, 35);
-            this.mnuCapNhat.Text = "Cập nhật";
-            // 
-            // mnuTimKiem
-            // 
-            this.mnuTimKiem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuTKTCThanhVien,
-            this.mnuTKTCTheLoai});
-            this.mnuTimKiem.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnuTimKiem.Name = "mnuTimKiem";
-            this.mnuTimKiem.Size = new System.Drawing.Size(126, 35);
-            this.mnuTimKiem.Text = "Tìm kiếm";
-            // 
-            // mnuBaoCao
-            // 
-            this.mnuBaoCao.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuTCTuan,
-            this.mnuTCThang,
-            this.mnuTCNam,
-            this.mnuTCThanhVien});
-            this.mnuBaoCao.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnuBaoCao.Name = "mnuBaoCao";
-            this.mnuBaoCao.Size = new System.Drawing.Size(110, 35);
-            this.mnuBaoCao.Text = "Báo cáo";
-            // 
             // mnuLoaiThu
             // 
             this.mnuLoaiThu.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -129,6 +98,7 @@ namespace QuanLyThuChi.Presentation
             this.mnuThanhVien.Name = "mnuThanhVien";
             this.mnuThanhVien.Size = new System.Drawing.Size(183, 34);
             this.mnuThanhVien.Text = "Thành viên";
+            this.mnuThanhVien.Click += new System.EventHandler(this.mnuThanhVien_Click);
             // 
             // mnuTaiKhoan
             // 
@@ -137,6 +107,15 @@ namespace QuanLyThuChi.Presentation
             this.mnuTaiKhoan.Size = new System.Drawing.Size(183, 34);
             this.mnuTaiKhoan.Text = "Tài khoản";
             // 
+            // mnuCapNhat
+            // 
+            this.mnuCapNhat.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuNhapThuChi});
+            this.mnuCapNhat.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuCapNhat.Name = "mnuCapNhat";
+            this.mnuCapNhat.Size = new System.Drawing.Size(121, 35);
+            this.mnuCapNhat.Text = "Cập nhật";
+            // 
             // mnuNhapThuChi
             // 
             this.mnuNhapThuChi.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -144,6 +123,16 @@ namespace QuanLyThuChi.Presentation
             this.mnuNhapThuChi.Size = new System.Drawing.Size(199, 34);
             this.mnuNhapThuChi.Text = "Nhập thu chi";
             this.mnuNhapThuChi.Click += new System.EventHandler(this.mnuNhapThuChi_Click);
+            // 
+            // mnuTimKiem
+            // 
+            this.mnuTimKiem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuTKTCThanhVien,
+            this.mnuTKTCTheLoai});
+            this.mnuTimKiem.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuTimKiem.Name = "mnuTimKiem";
+            this.mnuTimKiem.Size = new System.Drawing.Size(126, 35);
+            this.mnuTimKiem.Text = "Tìm kiếm";
             // 
             // mnuTKTCThanhVien
             // 
@@ -158,6 +147,18 @@ namespace QuanLyThuChi.Presentation
             this.mnuTKTCTheLoai.Name = "mnuTKTCTheLoai";
             this.mnuTKTCTheLoai.Size = new System.Drawing.Size(301, 34);
             this.mnuTKTCTheLoai.Text = "Thu - Chi của thể loại";
+            // 
+            // mnuBaoCao
+            // 
+            this.mnuBaoCao.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuTCTuan,
+            this.mnuTCThang,
+            this.mnuTCNam,
+            this.mnuTCThanhVien});
+            this.mnuBaoCao.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuBaoCao.Name = "mnuBaoCao";
+            this.mnuBaoCao.Size = new System.Drawing.Size(110, 35);
+            this.mnuBaoCao.Text = "Báo cáo";
             // 
             // mnuTCTuan
             // 
@@ -200,7 +201,7 @@ namespace QuanLyThuChi.Presentation
             // 
             this.mnuThoat.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuThoat.Name = "mnuThoat";
-            this.mnuThoat.Size = new System.Drawing.Size(180, 34);
+            this.mnuThoat.Size = new System.Drawing.Size(137, 34);
             this.mnuThoat.Text = "Thoát";
             // 
             // frmMain

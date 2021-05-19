@@ -58,6 +58,12 @@
     <Compile Include="frmNhapThuChi.Designer.cs">
       <DependentUpon>frmNhapThuChi.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQuanLyThanhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyThanhVien.Designer.cs">
+      <DependentUpon>frmQuanLyThanhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmMain.resx">
@@ -65,6 +71,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhapThuChi.resx">
       <DependentUpon>frmNhapThuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyThanhVien.resx">
+      <DependentUpon>frmQuanLyThanhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
