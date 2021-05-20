@@ -73,6 +73,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThemeColor.cs" />
+    <Compile Include="ucNhapChi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucNhapChi.Designer.cs">
+      <DependentUpon>ucNhapChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucNhapThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucNhapThu.Designer.cs">
+      <DependentUpon>ucNhapThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucQuanLyThanhVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -100,6 +112,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ucNhapChi.resx">
+      <DependentUpon>ucNhapChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNhapThu.resx">
+      <DependentUpon>ucNhapThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucQuanLyThanhVien.resx">
       <DependentUpon>ucQuanLyThanhVien.cs</DependentUpon>
     </EmbeddedResource>
