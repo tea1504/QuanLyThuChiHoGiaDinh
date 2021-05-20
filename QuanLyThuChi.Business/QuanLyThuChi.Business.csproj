@@ -43,7 +43,12 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyChi.cs" />
+    <Compile Include="QuanLyLoaiChi.cs" />
+    <Compile Include="QuanLyLoaiThu.cs" />
+    <Compile Include="QuanLyTaiKhoan.cs" />
     <Compile Include="QuanLyThanhVien.cs" />
+    <Compile Include="QuanLyThu.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QuanLyThuChi.Data\QuanLyThuChi.Data.csproj">

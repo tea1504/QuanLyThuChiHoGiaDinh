@@ -8,6 +8,7 @@ namespace QuanLyThuChi.Data
 {
     public class Chi
     {
+        private int maChi;
         private int maThanhVien;
         private int maLoaiChi;
         private int maTaiKhoan;
@@ -21,5 +22,16 @@ namespace QuanLyThuChi.Data
         public DateTime NgayChi { get => ngayChi; set => ngayChi = value; }
         public float SoTienChi { get => soTienChi; set => soTienChi = value; }
         public string GhiChuChi { get => ghiChuChi; set => ghiChuChi = value; }
+        public int MaChi { get => maChi; set => maChi = value; }
+        public Chi()
+        {
+            MaChi = 0;
+            MaThanhVien = 0;
+            MaLoaiChi = 0;
+            MaTaiKhoan = 0;
+            NgayChi = DateTime.Now;
+            SoTienChi = 0f;
+            GhiChuChi = null;
+        }
     }
 }

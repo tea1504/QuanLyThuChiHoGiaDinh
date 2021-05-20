@@ -24,6 +24,16 @@ namespace QuanLyThuChi.Business
             data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
+        public List<ThanhVien> ListThanhVien()
+        {
+            List<ThanhVien> list = new List<ThanhVien>();
+            DataTable data = DataThanhVien();
+            foreach(DataRow item in data.Rows)
+            {
+                list.Add(new ThanhVien(item));
+            }
+            return list;
+        }
         public int ThemThanhVien(ThanhVien thanhVien)
         {
             string query = "insert into THANHVIEN ( HOLOT , TEN , NGAYSINH) values ( @a , @b , @c )";

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,20 @@ namespace QuanLyThuChi.Data
             HoLot = ho;
             Ten = ten;
             NgaySinh = date;
+        }
+        public ThanhVien(DataRow data)
+        {
+            MaThanhVien = (int)data["MATHANHVIEN"];
+            HoLot = data["HOLOT"].ToString();
+            Ten = data["TEN"].ToString();
+            NgaySinh = DateTime.Parse(data["NGAYSINH"].ToString());
+        }
+        public ThanhVien(ThanhVien tv)
+        {
+            MaThanhVien = tv.MaThanhVien;
+            HoLot = tv.HoLot;
+            Ten = tv.Ten;
+            NgaySinh = tv.NgaySinh;
         }
     }
 }

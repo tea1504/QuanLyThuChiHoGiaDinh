@@ -65,8 +65,9 @@ namespace QuanLyThuChi.Presentation
             this.panel10.Controls.Add(this.label8);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(830, 100);
+            this.panel10.Size = new System.Drawing.Size(1083, 129);
             this.panel10.TabIndex = 2;
             // 
             // label8
@@ -75,7 +76,8 @@ namespace QuanLyThuChi.Presentation
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(197, 24);
+            this.label8.Location = new System.Drawing.Point(283, 31);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(455, 54);
             this.label8.TabIndex = 0;
@@ -86,18 +88,20 @@ namespace QuanLyThuChi.Presentation
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 100);
+            this.panel1.Location = new System.Drawing.Point(0, 129);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(830, 570);
+            this.panel1.Size = new System.Drawing.Size(1083, 418);
             this.panel1.TabIndex = 3;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.dgvDSThanhVien);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 143);
+            this.panel4.Location = new System.Drawing.Point(0, 153);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(830, 427);
+            this.panel4.Size = new System.Drawing.Size(1083, 265);
             this.panel4.TabIndex = 1;
             // 
             // dgvDSThanhVien
@@ -108,11 +112,12 @@ namespace QuanLyThuChi.Presentation
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDSThanhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSThanhVien.Location = new System.Drawing.Point(12, 6);
+            this.dgvDSThanhVien.Location = new System.Drawing.Point(14, 8);
+            this.dgvDSThanhVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvDSThanhVien.Name = "dgvDSThanhVien";
             this.dgvDSThanhVien.ReadOnly = true;
             this.dgvDSThanhVien.RowTemplate.Height = 30;
-            this.dgvDSThanhVien.Size = new System.Drawing.Size(803, 315);
+            this.dgvDSThanhVien.Size = new System.Drawing.Size(1051, 176);
             this.dgvDSThanhVien.TabIndex = 0;
             this.dgvDSThanhVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSThanhVien_CellClick);
             this.dgvDSThanhVien.Sorted += new System.EventHandler(this.dgvDSThanhVien_Sorted);
@@ -123,19 +128,20 @@ namespace QuanLyThuChi.Presentation
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(830, 143);
+            this.panel3.Size = new System.Drawing.Size(1083, 153);
             this.panel3.TabIndex = 0;
             // 
             // panel6
             // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.Controls.Add(this.dtpNgaySinh);
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Location = new System.Drawing.Point(0, 70);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 63);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(830, 64);
+            this.panel6.Size = new System.Drawing.Size(1083, 62);
             this.panel6.TabIndex = 3;
             // 
             // dtpNgaySinh
@@ -144,9 +150,10 @@ namespace QuanLyThuChi.Presentation
             this.dtpNgaySinh.CustomFormat = "dd/MM/yyyy";
             this.dtpNgaySinh.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgaySinh.Location = new System.Drawing.Point(293, 11);
+            this.dtpNgaySinh.Location = new System.Drawing.Point(396, 14);
+            this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(379, 38);
+            this.dtpNgaySinh.Size = new System.Drawing.Size(447, 38);
             this.dtpNgaySinh.TabIndex = 3;
             // 
             // label2
@@ -154,7 +161,8 @@ namespace QuanLyThuChi.Presentation
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(154, 17);
+            this.label2.Location = new System.Drawing.Point(232, 22);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(133, 31);
             this.label2.TabIndex = 0;
@@ -162,32 +170,34 @@ namespace QuanLyThuChi.Presentation
             // 
             // panel5
             // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.Controls.Add(this.txtTen);
             this.panel5.Controls.Add(this.txtHoLot);
             this.panel5.Controls.Add(this.label1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(830, 64);
+            this.panel5.Size = new System.Drawing.Size(1083, 63);
             this.panel5.TabIndex = 0;
             // 
             // txtTen
             // 
             this.txtTen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtTen.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTen.Location = new System.Drawing.Point(553, 14);
+            this.txtTen.Location = new System.Drawing.Point(703, 18);
+            this.txtTen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(119, 38);
+            this.txtTen.Size = new System.Drawing.Size(140, 38);
             this.txtTen.TabIndex = 2;
             // 
             // txtHoLot
             // 
             this.txtHoLot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtHoLot.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoLot.Location = new System.Drawing.Point(293, 14);
+            this.txtHoLot.Location = new System.Drawing.Point(396, 18);
+            this.txtHoLot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtHoLot.Name = "txtHoLot";
-            this.txtHoLot.Size = new System.Drawing.Size(254, 38);
+            this.txtHoLot.Size = new System.Drawing.Size(299, 38);
             this.txtHoLot.TabIndex = 1;
             // 
             // label1
@@ -195,7 +205,8 @@ namespace QuanLyThuChi.Presentation
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(188, 20);
+            this.label1.Location = new System.Drawing.Point(272, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 31);
             this.label1.TabIndex = 0;
@@ -210,9 +221,10 @@ namespace QuanLyThuChi.Presentation
             this.panel2.Controls.Add(this.btnSua);
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 570);
+            this.panel2.Location = new System.Drawing.Point(0, 474);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(830, 100);
+            this.panel2.Size = new System.Drawing.Size(1083, 73);
             this.panel2.TabIndex = 4;
             // 
             // btnThoat
@@ -221,9 +233,10 @@ namespace QuanLyThuChi.Presentation
             this.btnThoat.BackColor = System.Drawing.Color.White;
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.ForeColor = System.Drawing.Color.Black;
-            this.btnThoat.Location = new System.Drawing.Point(712, 25);
+            this.btnThoat.Location = new System.Drawing.Point(886, 14);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(103, 51);
+            this.btnThoat.Size = new System.Drawing.Size(122, 46);
             this.btnThoat.TabIndex = 9;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
@@ -235,9 +248,10 @@ namespace QuanLyThuChi.Presentation
             this.btnHuy.BackColor = System.Drawing.Color.Teal;
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnHuy.Location = new System.Drawing.Point(572, 25);
+            this.btnHuy.Location = new System.Drawing.Point(721, 14);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(103, 51);
+            this.btnHuy.Size = new System.Drawing.Size(122, 46);
             this.btnHuy.TabIndex = 8;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = false;
@@ -249,9 +263,10 @@ namespace QuanLyThuChi.Presentation
             this.btnLuu.BackColor = System.Drawing.Color.Teal;
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLuu.Location = new System.Drawing.Point(432, 25);
+            this.btnLuu.Location = new System.Drawing.Point(555, 14);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(103, 51);
+            this.btnLuu.Size = new System.Drawing.Size(122, 46);
             this.btnLuu.TabIndex = 7;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
@@ -263,9 +278,10 @@ namespace QuanLyThuChi.Presentation
             this.btnXoa.BackColor = System.Drawing.Color.Teal;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnXoa.Location = new System.Drawing.Point(292, 25);
+            this.btnXoa.Location = new System.Drawing.Point(390, 14);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(103, 51);
+            this.btnXoa.Size = new System.Drawing.Size(122, 46);
             this.btnXoa.TabIndex = 6;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -277,9 +293,10 @@ namespace QuanLyThuChi.Presentation
             this.btnSua.BackColor = System.Drawing.Color.Teal;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSua.Location = new System.Drawing.Point(152, 25);
+            this.btnSua.Location = new System.Drawing.Point(225, 14);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(103, 51);
+            this.btnSua.Size = new System.Drawing.Size(122, 46);
             this.btnSua.TabIndex = 5;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
@@ -291,9 +308,10 @@ namespace QuanLyThuChi.Presentation
             this.btnThem.BackColor = System.Drawing.Color.Teal;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnThem.Location = new System.Drawing.Point(12, 25);
+            this.btnThem.Location = new System.Drawing.Point(59, 14);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(103, 51);
+            this.btnThem.Size = new System.Drawing.Size(122, 46);
             this.btnThem.TabIndex = 4;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
@@ -301,14 +319,14 @@ namespace QuanLyThuChi.Presentation
             // 
             // frmQuanLyThanhVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(830, 670);
+            this.ClientSize = new System.Drawing.Size(1083, 547);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel10);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.Name = "frmQuanLyThanhVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý thành viên";
