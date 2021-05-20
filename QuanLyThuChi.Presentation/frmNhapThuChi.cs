@@ -17,5 +17,9 @@ namespace QuanLyThuChi.Presentation
             InitializeComponent();
         }
 
+        private void btnThoatThu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

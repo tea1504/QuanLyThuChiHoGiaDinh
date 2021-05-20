@@ -357,6 +357,7 @@ namespace QuanLyThuChi.Presentation
             this.btnThoatThu.TabIndex = 2;
             this.btnThoatThu.Text = "Thoát";
             this.btnThoatThu.UseVisualStyleBackColor = true;
+            this.btnThoatThu.Click += new System.EventHandler(this.btnThoatThu_Click);
             // 
             // btnTiepTucThu
             // 
