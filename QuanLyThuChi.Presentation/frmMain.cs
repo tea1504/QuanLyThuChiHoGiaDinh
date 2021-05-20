@@ -100,7 +100,7 @@ namespace QuanLyThuChi.Presentation
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmQuanLyThanhVien(), sender);
+            OpenChildForm(new frmQuanLy(), sender);
         }
 
         private void btnCloseChildForm_Click(object sender, EventArgs e)
