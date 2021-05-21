@@ -38,5 +38,11 @@ namespace QuanLyThuChi.Business
             }
             return list;
         }
+        public LoaiThu LayLoaiThu(int id)
+        {
+            string query = "select * from LOAITHU where MALOAITHU = @a";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { id });
+            return new LoaiThu(data.Rows[0]);
+        }
     }
 }

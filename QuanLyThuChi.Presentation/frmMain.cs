@@ -24,11 +24,14 @@ namespace QuanLyThuChi.Presentation
             this.Text = string.Empty;
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            OpenChildForm(new frmHome(), btnHome);
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            lbDate.Text = DateTime.Now.ToString();
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
         }
         private Color SelectThemeColor()
         {
@@ -96,11 +99,7 @@ namespace QuanLyThuChi.Presentation
             panelLogo.BackColor = Color.FromArgb(39, 39, 58);
             currentButton = null;
             btnCloseChildForm.Visible = false;
-        }
-
-        private void btnAdmin_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new frmQuanLy(), sender);
+            OpenChildForm(new frmHome(), btnHome);
         }
 
         private void btnCloseChildForm_Click(object sender, EventArgs e)
@@ -131,6 +130,26 @@ namespace QuanLyThuChi.Presentation
         private void btnNhapThuChi_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmNhapThuChi(), sender);
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmQuanLy(), sender);
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmHome(), sender);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbDate.Text = DateTime.Now.ToString();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmTimKiem(), sender);
         }
     }
 }

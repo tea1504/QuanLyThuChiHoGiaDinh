@@ -83,7 +83,7 @@ namespace QuanLyThuChi.Presentation
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "frmNhapThuChi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nhập thu chi";
+            this.Text = "Nhập Thu - Chi";
             this.Load += new System.EventHandler(this.frmNhapThuChi_Load);
             this.tabThuChi.ResumeLayout(false);
             this.ResumeLayout(false);

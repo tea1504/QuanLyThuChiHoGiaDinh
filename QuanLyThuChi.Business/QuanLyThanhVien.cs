@@ -53,5 +53,12 @@ namespace QuanLyThuChi.Business
             string query = "delete from THANHVIEN where MATHANHVIEN = @a";
             return DataProvider.Instance.ExecuteNonQuery(query, new object[] { id });
         }
+        public ThanhVien LayThanhVien(int id)
+        {
+            string query = "select * from THANHVIEN where MATHANHVIEN = @a";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { id });
+            ThanhVien thanhVien = new ThanhVien(data.Rows[0]);
+            return thanhVien;
+        }
     }
 }

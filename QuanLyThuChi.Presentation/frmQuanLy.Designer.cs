@@ -104,7 +104,7 @@ namespace QuanLyThuChi.Presentation
             this.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "frmQuanLy";
-            this.Text = "Quản lý";
+            this.Text = "Quản lý các danh mục";
             this.Load += new System.EventHandler(this.frmQuanLy_Load);
             this.tabQuanLy.ResumeLayout(false);
             this.ResumeLayout(false);

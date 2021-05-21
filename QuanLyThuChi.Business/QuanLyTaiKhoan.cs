@@ -38,5 +38,11 @@ namespace QuanLyThuChi.Business
             }
             return list;
         }
+        public TaiKhoan LayTaiKhoan(int id)
+        {
+            string query = "select * from TAIKHOAN where MATAIKHOAN = @a";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { id });
+            return new TaiKhoan(data.Rows[0]);
+        }
     }
 }
