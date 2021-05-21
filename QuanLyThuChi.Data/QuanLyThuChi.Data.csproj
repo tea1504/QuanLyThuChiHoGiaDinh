@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Chi.cs" />
+    <Compile Include="ChiDetail.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="LoaiChi.cs" />

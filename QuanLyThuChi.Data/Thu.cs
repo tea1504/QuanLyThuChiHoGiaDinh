@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,9 @@ namespace QuanLyThuChi.Data
         private DateTime ngayThu;
         private float soTienThu;
         private string ghiChuThu;
+        private TaiKhoan taiKhoan;
+        private LoaiThu loaiThu;
+        private ThanhVien thanhVien;
 
         public int MaThanhVien { get => maThanhVien; set => maThanhVien = value; }
         public int MaLoaiThu { get => maLoaiThu; set => maLoaiThu = value; }
@@ -23,6 +27,9 @@ namespace QuanLyThuChi.Data
         public float SoTienThu { get => soTienThu; set => soTienThu = value; }
         public string GhiChuThu { get => ghiChuThu; set => ghiChuThu = value; }
         public int MaThu { get => maThu; set => maThu = value; }
+        public TaiKhoan TaiKhoan { get => taiKhoan; set => taiKhoan = value; }
+        public LoaiThu LoaiThu { get => loaiThu; set => loaiThu = value; }
+        public ThanhVien ThanhVien { get => thanhVien; set => thanhVien = value; }
 
         public Thu()
         {
@@ -67,7 +74,16 @@ namespace QuanLyThuChi.Data
             SoTienThu = t.SoTienThu;
             GhiChuThu = t.GhiChuThu;
         }
-
+        public Thu(DataRow data)
+        {
+            MaThu = (int)data["MATHU"];
+            MaTaiKhoan = (int)data["MATAIKHOAN"];
+            MaThanhVien = (int)data["MATHANHVIEN"];
+            MaLoaiThu = (int)data["MALOAITHU"];
+            NgayThu = DateTime.Parse(data["NGAYTHU"].ToString());
+            SoTienThu = (float)(Double.Parse(data["SOTIENTHU"].ToString()));
+            GhiChuThu = data["GHICHUTHU"].ToString();
+        }
         public override string ToString()
         {
             return "Thông tin thu: \tMTV: " + MaThanhVien 

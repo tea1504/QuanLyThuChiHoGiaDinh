@@ -37,5 +37,11 @@ namespace QuanLyThuChi.Business
             }
             return list;
         }
+        public LoaiChi LayLoaiChi(int id)
+        {
+            string query = "select * from LOAICHI where MALOAICHI = @a";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { id });
+            return new LoaiChi(data.Rows[0]);
+        }
     }
 }
