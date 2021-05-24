@@ -110,5 +110,27 @@ namespace QuanLyThuChi.Business
             }
             return list;
         }
+        public List<string> getYear()
+        {
+            List<string> res = new List<string>();
+            string query = "select year(NGAYTHU) 'YEAR' from THU group by year(NGAYTHU)";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach(DataRow item in data.Rows)
+            {
+                res.Add(item["YEAR"].ToString());
+            }
+            return res;
+        }
+        public List<string> getMonth(string year = "")
+        {
+            List<string> res = new List<string>();
+            string query = "select month(NGAYTHU) 'MONTH' from THU where year(NGAYTHU) = @a group by month(NGAYTHU)";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { year });
+            foreach (DataRow item in data.Rows)
+            {
+                res.Add(item["MONTH"].ToString());
+            }
+            return res;
+        }
     }
 }

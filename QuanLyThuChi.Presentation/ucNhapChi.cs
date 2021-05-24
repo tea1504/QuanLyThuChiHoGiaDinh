@@ -146,6 +146,11 @@ namespace QuanLyThuChi.Presentation
             setup();
         }
 
+        private void dtpNgayChi_ValueChanged(object sender, EventArgs e)
+        {
+            thongTin.NgayChi = dtpNgayChi.Value;
+        }
+
         bool check()
         {
             if (txtTaiKhoanChi.Text.Trim().CompareTo("") == 0)

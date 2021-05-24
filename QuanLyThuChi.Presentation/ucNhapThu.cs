@@ -165,6 +165,11 @@ namespace QuanLyThuChi.Presentation
             setup();
         }
 
+        private void dtpNgayThu_ValueChanged(object sender, EventArgs e)
+        {
+            thongTin.NgayThu = dtpNgayThu.Value;
+        }
+
         void setup()
         {
             ochua.Controls.Clear();

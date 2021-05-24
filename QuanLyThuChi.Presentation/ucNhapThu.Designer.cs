@@ -243,6 +243,7 @@ namespace QuanLyThuChi.Presentation
             this.dtpNgayThu.Name = "dtpNgayThu";
             this.dtpNgayThu.Size = new System.Drawing.Size(458, 38);
             this.dtpNgayThu.TabIndex = 1;
+            this.dtpNgayThu.ValueChanged += new System.EventHandler(this.dtpNgayThu_ValueChanged);
             // 
             // label2
             // 

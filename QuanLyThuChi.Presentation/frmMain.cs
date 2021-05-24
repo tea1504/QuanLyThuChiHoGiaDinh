@@ -151,5 +151,10 @@ namespace QuanLyThuChi.Presentation
         {
             OpenChildForm(new frmTimKiem(), sender);
         }
+
+        private void btnBaoCao_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmBaoCao(), sender);
+        }
     }
 }
