@@ -28,6 +28,9 @@ namespace QuanLyThuChi.Presentation
             ucBaoCaoThuTheoThang ucThuThang = new ucBaoCaoThuTheoThang();
             tabThuTheoThang.Controls.Add(ucThuThang);
             ucThuThang.Dock = DockStyle.Fill;
+            ucBaoCaoChiTheoThang ucChiThang = new ucBaoCaoChiTheoThang();
+            tabChiTheoThang.Controls.Add(ucChiThang);
+            ucChiThang.Dock = DockStyle.Fill;
         }
     }
 }

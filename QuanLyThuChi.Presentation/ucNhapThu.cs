@@ -78,6 +78,39 @@ namespace QuanLyThuChi.Presentation
                 ochua.Controls.Add(btn);
             }
         }
+        private void showSoTien(float soTien)
+        {
+            float temp = 1000f;
+            for (int i = 1; i <= 4; i++)
+            {
+                Button btn = new Button()
+                {
+                    Width = width,
+                    Height = height
+                };
+                btn.Text = (soTien * temp).ToString("#,###");
+                btn.Tag = soTien * temp;
+                temp *= 10f ;
+                btn.Click += btn_Click_SoTien;
+                ochua.Controls.Add(btn);
+            }
+        }
+        private void showGhiChu(string ghiChu)
+        {
+            List<string> listGhiChu = QuanLyThu.Instance.timGhiChu(ghiChu);
+            foreach (string item in listGhiChu)
+            {
+                Button btn = new Button()
+                {
+                    Width = width*2,
+                    Height = height
+                };
+                btn.Text = item;
+                btn.Tag = item;
+                btn.Click += btn_Click_GhiChu;
+                ochua.Controls.Add(btn);
+            }
+        }
         void btn_Click_ThanhVien(object sender, EventArgs e)
         {
             ThanhVien tv = (ThanhVien)(((Button)sender).Tag);
@@ -95,6 +128,18 @@ namespace QuanLyThuChi.Presentation
             LoaiThu lt = (LoaiThu)(((Button)sender).Tag);
             txtTheLoaiThu.Text = lt.TenLoaiThu;
             thongTin.MaLoaiThu = lt.MaLoaiThu;
+        }
+        void btn_Click_SoTien(object sender, EventArgs e)
+        {
+            string st = (((Button)sender).Tag).ToString();
+            txtSoTienThu.Text = st;
+            ochua.Controls.Clear();
+        }
+        void btn_Click_GhiChu(object sender, EventArgs e)
+        {
+            string st = (((Button)sender).Tag).ToString();
+            txtGhiChuThu.Text = st;
+            ochua.Controls.Clear();
         }
         private void txtThanhVienThu_Click(object sender, EventArgs e)
         {
@@ -168,6 +213,19 @@ namespace QuanLyThuChi.Presentation
         private void dtpNgayThu_ValueChanged(object sender, EventArgs e)
         {
             thongTin.NgayThu = dtpNgayThu.Value;
+        }
+
+        private void txtSoTienThu_TextChanged(object sender, EventArgs e)
+        {
+            setup();
+            if(txtSoTienThu.Text.CompareTo("")!=0)
+                showSoTien((float)(Double.Parse(txtSoTienThu.Text)));
+        }
+
+        private void txtGhiChuThu_TextChanged(object sender, EventArgs e)
+        {
+            setup();
+            showGhiChu(txtGhiChuThu.Text);
         }
 
         void setup()

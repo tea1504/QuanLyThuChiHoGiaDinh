@@ -125,6 +125,12 @@
     <Compile Include="ucBaoCaoChi.Designer.cs">
       <DependentUpon>ucBaoCaoChi.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucBaoCaoChiTheoThang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucBaoCaoChiTheoThang.Designer.cs">
+      <DependentUpon>ucBaoCaoChiTheoThang.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucBaoCaoThu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,6 +155,12 @@
     <Compile Include="ucNhapThu.Designer.cs">
       <DependentUpon>ucNhapThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucQuanLyTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucQuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>ucQuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucQuanLyThanhVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -167,9 +179,9 @@
     <Compile Include="ucTimKiemTongHop.Designer.cs">
       <DependentUpon>ucTimKiemTongHop.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BaoCaoChiTheoThang.rdlc" />
     <EmbeddedResource Include="BaoCaoThuTheoThang.rdlc" />
     <EmbeddedResource Include="Chi.rdlc" />
-    <EmbeddedResource Include="ChiTheoThang.rdlc" />
     <EmbeddedResource Include="frmBaoCao.resx">
       <DependentUpon>frmBaoCao.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +216,9 @@
     <EmbeddedResource Include="ucBaoCaoChi.resx">
       <DependentUpon>ucBaoCaoChi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucBaoCaoChiTheoThang.resx">
+      <DependentUpon>ucBaoCaoChiTheoThang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucBaoCaoThu.resx">
       <DependentUpon>ucBaoCaoThu.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucNhapThu.resx">
       <DependentUpon>ucNhapThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucQuanLyTaiKhoan.resx">
+      <DependentUpon>ucQuanLyTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucQuanLyThanhVien.resx">
       <DependentUpon>ucQuanLyThanhVien.cs</DependentUpon>

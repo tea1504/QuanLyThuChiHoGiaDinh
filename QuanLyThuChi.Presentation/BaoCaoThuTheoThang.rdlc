@@ -1019,31 +1019,75 @@
             <ChartCategoryHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Group Name="ChartGroup" />
-                  <Label />
+                  <Group Name="Chart1_CategoryGroup">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!NGAYTHU.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!NGAYTHU.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!NGAYTHU.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Label />
+                  <Group Name="Chart1_SeriesGroup">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!THANHVIEN.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!THANHVIEN.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!THANHVIEN.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="EmptySeriesName">
+                <ChartSeries Name="SOTIENTHU">
                   <ChartDataPoints>
                     <ChartDataPoint>
-                      <ChartDataPointValues />
+                      <ChartDataPointValues>
+                        <Y>=Sum(Fields!SOTIENTHU.Value)</Y>
+                      </ChartDataPointValues>
+                      <ChartDataLabel>
+                        <Style />
+                        <UseValueAsLabel>true</UseValueAsLabel>
+                        <Visible>true</Visible>
+                      </ChartDataLabel>
+                      <Style />
                       <ChartMarker>
                         <Type>Auto</Type>
+                        <Style />
                       </ChartMarker>
+                      <DataElementOutput>Output</DataElementOutput>
                     </ChartDataPoint>
                   </ChartDataPoints>
                   <Type>Line</Type>
                   <Style />
+                  <ChartEmptyPoints>
+                    <Style />
+                    <ChartMarker>
+                      <Style />
+                    </ChartMarker>
+                    <ChartDataLabel>
+                      <Style />
+                    </ChartDataLabel>
+                  </ChartEmptyPoints>
+                  <ValueAxisName>Primary</ValueAxisName>
+                  <CategoryAxisName>Primary</CategoryAxisName>
+                  <ChartSmartLabel>
+                    <CalloutLineColor>Black</CalloutLineColor>
+                    <MinMovingDistance>0pt</MinMovingDistance>
+                  </ChartSmartLabel>
                 </ChartSeries>
               </ChartSeriesCollection>
             </ChartData>
@@ -1057,6 +1101,7 @@
                         <Style>None</Style>
                       </Border>
                       <FontSize>8pt</FontSize>
+                      <Format>d</Format>
                       <Color>#5c5c5c</Color>
                     </Style>
                     <ChartAxisTitle>
@@ -1170,6 +1215,7 @@
                         <Style>None</Style>
                       </Border>
                       <FontSize>8pt</FontSize>
+                      <Format>#,0.0 'VND';(#,0.0 'VND')</Format>
                       <Color>#5c5c5c</Color>
                     </Style>
                     <ChartAxisTitle>
@@ -1300,7 +1346,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Chart Title</Caption>
+                <Caption>Biểu đồ thu theo tháng</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>9pt</FontSize>
@@ -1329,8 +1375,9 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
+            <DataSetName>DataSet1</DataSetName>
             <Left>7.95139in</Left>
-            <Height>3.66542in</Height>
+            <Height>5.30208in</Height>
             <Width>7.97569in</Width>
             <ZIndex>1</ZIndex>
             <Style>
@@ -1343,7 +1390,7 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>3.66542in</Height>
+        <Height>5.30208in</Height>
         <Style />
       </Body>
       <Width>15.92708in</Width>

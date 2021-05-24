@@ -21,6 +21,9 @@ namespace QuanLyThuChi.Presentation
             ucQuanLyThanhVien qltv = new ucQuanLyThanhVien();
             tabThanhVien.Controls.Add(qltv);
             qltv.Dock = DockStyle.Fill;
+            ucQuanLyTaiKhoan qltk = new ucQuanLyTaiKhoan();
+            tabTaiKhoan.Controls.Add(qltk);
+            qltk.Dock = DockStyle.Fill;
         }
     }
 }

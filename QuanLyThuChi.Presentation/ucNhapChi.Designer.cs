@@ -141,6 +141,7 @@ namespace QuanLyThuChi.Presentation
             this.txtSoTienChi.Size = new System.Drawing.Size(458, 38);
             this.txtSoTienChi.TabIndex = 19;
             this.txtSoTienChi.Click += new System.EventHandler(this.txtSoTienChi_Click);
+            this.txtSoTienChi.TextChanged += new System.EventHandler(this.txtSoTienChi_TextChanged);
             // 
             // txtTheLoaiChi
             // 
@@ -185,6 +186,7 @@ namespace QuanLyThuChi.Presentation
             this.txtGhiChuChi.Size = new System.Drawing.Size(458, 248);
             this.txtGhiChuChi.TabIndex = 20;
             this.txtGhiChuChi.Click += new System.EventHandler(this.txtGhiChuChi_Click);
+            this.txtGhiChuChi.TextChanged += new System.EventHandler(this.txtGhiChuChi_TextChanged);
             // 
             // btnLuuThu
             // 

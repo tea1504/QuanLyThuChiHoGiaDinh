@@ -129,7 +129,28 @@ namespace QuanLyThuChi.Presentation
                 dtpNgayChi.Value = DateTime.Now;
             }
         }
-
+        private void showGhiChu(string ghiChu)
+        {
+            List<string> listGhiChu = QuanLyChi.Instance.timGhiChu(ghiChu);
+            foreach (string item in listGhiChu)
+            {
+                Button btn = new Button()
+                {
+                    Width = width * 2,
+                    Height = height
+                };
+                btn.Text = item;
+                btn.Tag = item;
+                btn.Click += btn_Click_GhiChu;
+                ochua.Controls.Add(btn);
+            }
+        }
+        void btn_Click_GhiChu(object sender, EventArgs e)
+        {
+            string st = (((Button)sender).Tag).ToString();
+            txtGhiChuChi.Text = st;
+            ochua.Controls.Clear();
+        }
         private void txtTheLoaiChi_Click(object sender, EventArgs e)
         {
             setup();
@@ -149,6 +170,42 @@ namespace QuanLyThuChi.Presentation
         private void dtpNgayChi_ValueChanged(object sender, EventArgs e)
         {
             thongTin.NgayChi = dtpNgayChi.Value;
+        }
+
+        private void txtSoTienChi_TextChanged(object sender, EventArgs e)
+        {
+            setup();
+            if (txtSoTienChi.Text.CompareTo("") != 0)
+                showSoTien((float)(Double.Parse(txtSoTienChi.Text)));
+        }
+        private void showSoTien(float soTien)
+        {
+            float temp = 1000f;
+            for (int i = 1; i <= 4; i++)
+            {
+                Button btn = new Button()
+                {
+                    Width = width,
+                    Height = height
+                };
+                btn.Text = (soTien * temp).ToString("#,###");
+                btn.Tag = soTien * temp;
+                temp *= 10f;
+                btn.Click += btn_Click_SoTien;
+                ochua.Controls.Add(btn);
+            }
+        }
+        void btn_Click_SoTien(object sender, EventArgs e)
+        {
+            string st = (((Button)sender).Tag).ToString();
+            txtSoTienChi.Text = st;
+            ochua.Controls.Clear();
+        }
+
+        private void txtGhiChuChi_TextChanged(object sender, EventArgs e)
+        {
+            setup();
+            showGhiChu(txtGhiChuChi.Text);
         }
 
         bool check()

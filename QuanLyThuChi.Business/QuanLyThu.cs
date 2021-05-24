@@ -132,5 +132,16 @@ namespace QuanLyThuChi.Business
             }
             return res;
         }
+        public List<String> timGhiChu(string ghichu)
+        {
+            List<string> list = new List<string>();
+            string query = "select GHICHUTHU from THU WHERE GHICHUTHU like '%" + ghichu + "%'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach(DataRow item in data.Rows)
+            {
+                list.Add(item["GHICHUTHU"].ToString());
+            }
+            return list;
+        }
     }
 }

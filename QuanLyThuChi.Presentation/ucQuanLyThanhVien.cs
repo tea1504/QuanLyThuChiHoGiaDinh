@@ -76,20 +76,21 @@ namespace QuanLyThuChi.Presentation
             txtTen.Clear();
             dtpNgaySinh.Value = DateTime.Now;
         }
-        void KiemTraDuLieu()
+        bool KiemTraDuLieu()
         {
             if (txtHoLot.Text.Trim().CompareTo("") == 0)
             {
                 MessageBox.Show("Bạn chưa nhập họ lót", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtHoLot.Focus();
-                return;
+                return false;
             }
             if (txtTen.Text.Trim().CompareTo("") == 0)
             {
                 MessageBox.Show("Bạn chưa nhập tên", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtTen.Focus();
-                return;
+                return false;
             }
+            return true;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -117,27 +118,31 @@ namespace QuanLyThuChi.Presentation
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            KiemTraDuLieu();
-            if (them)
+            if (KiemTraDuLieu())
             {
-                ThanhVien thanhVienCreate = new ThanhVien(txtHoLot.Text, txtTen.Text, dtpNgaySinh.Value);
-                int res = QuanLyThanhVien.Instance.ThemThanhVien(thanhVienCreate);
-                MessageBox.Show("Đã thêm thành viên " + thanhVienCreate.HoLot + " " + thanhVienCreate.Ten,
-                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dataTable.Rows.Add(res, thanhVienCreate.HoLot, thanhVienCreate.Ten, thanhVienCreate.NgaySinh);
+                if (them)
+                {
+                    ThanhVien thanhVienCreate = new ThanhVien(txtHoLot.Text, txtTen.Text, dtpNgaySinh.Value);
+                    int res = QuanLyThanhVien.Instance.ThemThanhVien(thanhVienCreate);
+                    MessageBox.Show("Đã thêm thành viên " + thanhVienCreate.HoLot + " " + thanhVienCreate.Ten,
+                        "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataTable.Rows.Add(res, thanhVienCreate.HoLot, thanhVienCreate.Ten, thanhVienCreate.NgaySinh);
+                }
+                else
+                {
+                    int i = dgvDSThanhVien.CurrentRow.Index;
+                    ThanhVien thanhVienUpdate = new ThanhVien(Int32.Parse(dgvDSThanhVien[0, i].Value.ToString()), txtHoLot.Text, txtTen.Text, dtpNgaySinh.Value);
+                    QuanLyThanhVien.Instance.SuaThanhVien(thanhVienUpdate);
+                    MessageBox.Show("Đã cập nhật thành viên " + thanhVienUpdate.HoLot + " " + thanhVienUpdate.Ten,
+                        "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataTable.Rows[i][1] = thanhVienUpdate.HoLot;
+                    dataTable.Rows[i][2] = thanhVienUpdate.Ten;
+                    dataTable.Rows[i][3] = thanhVienUpdate.NgaySinh;
+                }
+                them = false;
+                DieuKhienKhiBinhThuong();
+                GanDuLieu();
             }
-            else
-            {
-                int i = dgvDSThanhVien.CurrentRow.Index;
-                ThanhVien thanhVienUpdate = new ThanhVien(Int32.Parse(dgvDSThanhVien[0, i].Value.ToString()), txtHoLot.Text, txtTen.Text, dtpNgaySinh.Value);
-                MessageBox.Show("Đã cập nhật thành viên " + thanhVienUpdate.HoLot + " " + thanhVienUpdate.Ten,
-                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dataTable.Rows[i][1] = thanhVienUpdate.HoLot;
-                dataTable.Rows[i][2] = thanhVienUpdate.Ten;
-                dataTable.Rows[i][3] = thanhVienUpdate.NgaySinh;
-            }
-            them = false;
-            DieuKhienKhiBinhThuong();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

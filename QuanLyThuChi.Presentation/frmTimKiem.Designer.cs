@@ -29,25 +29,11 @@ namespace QuanLyThuChi.Presentation
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabTimKiem = new System.Windows.Forms.TabControl();
             this.tabThanVien = new System.Windows.Forms.TabPage();
-            this.tabTaiKhoan = new System.Windows.Forms.TabPage();
             this.tabTongHop = new System.Windows.Forms.TabPage();
+            this.tabTimKiem = new System.Windows.Forms.TabControl();
             this.tabTimKiem.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tabTimKiem
-            // 
-            this.tabTimKiem.Controls.Add(this.tabTongHop);
-            this.tabTimKiem.Controls.Add(this.tabThanVien);
-            this.tabTimKiem.Controls.Add(this.tabTaiKhoan);
-            this.tabTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabTimKiem.Location = new System.Drawing.Point(0, 0);
-            this.tabTimKiem.Name = "tabTimKiem";
-            this.tabTimKiem.SelectedIndex = 0;
-            this.tabTimKiem.ShowToolTips = true;
-            this.tabTimKiem.Size = new System.Drawing.Size(1537, 822);
-            this.tabTimKiem.TabIndex = 0;
             // 
             // tabThanVien
             // 
@@ -60,17 +46,6 @@ namespace QuanLyThuChi.Presentation
             this.tabThanVien.ToolTipText = "Tìm kiếm Thu - Chi theo thành viên";
             this.tabThanVien.UseVisualStyleBackColor = true;
             // 
-            // tabTaiKhoan
-            // 
-            this.tabTaiKhoan.Location = new System.Drawing.Point(4, 40);
-            this.tabTaiKhoan.Name = "tabTaiKhoan";
-            this.tabTaiKhoan.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTaiKhoan.Size = new System.Drawing.Size(1529, 778);
-            this.tabTaiKhoan.TabIndex = 1;
-            this.tabTaiKhoan.Text = "Tài khoản";
-            this.tabTaiKhoan.ToolTipText = "Tìm kiếm Thu - Chi theo tài khoản";
-            this.tabTaiKhoan.UseVisualStyleBackColor = true;
-            // 
             // tabTongHop
             // 
             this.tabTongHop.Location = new System.Drawing.Point(4, 40);
@@ -80,6 +55,18 @@ namespace QuanLyThuChi.Presentation
             this.tabTongHop.Text = "Tổng hợp";
             this.tabTongHop.ToolTipText = "Tìm kiếm Thu - Chi theo nhiều trường";
             this.tabTongHop.UseVisualStyleBackColor = true;
+            // 
+            // tabTimKiem
+            // 
+            this.tabTimKiem.Controls.Add(this.tabTongHop);
+            this.tabTimKiem.Controls.Add(this.tabThanVien);
+            this.tabTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabTimKiem.Location = new System.Drawing.Point(0, 0);
+            this.tabTimKiem.Name = "tabTimKiem";
+            this.tabTimKiem.SelectedIndex = 0;
+            this.tabTimKiem.ShowToolTips = true;
+            this.tabTimKiem.Size = new System.Drawing.Size(1537, 822);
+            this.tabTimKiem.TabIndex = 0;
             // 
             // frmTimKiem
             // 
@@ -99,9 +86,8 @@ namespace QuanLyThuChi.Presentation
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabTimKiem;
         private System.Windows.Forms.TabPage tabThanVien;
-        private System.Windows.Forms.TabPage tabTaiKhoan;
         private System.Windows.Forms.TabPage tabTongHop;
+        private System.Windows.Forms.TabControl tabTimKiem;
     }
 }
