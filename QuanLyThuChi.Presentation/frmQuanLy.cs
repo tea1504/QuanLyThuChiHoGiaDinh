@@ -24,6 +24,12 @@ namespace QuanLyThuChi.Presentation
             ucQuanLyTaiKhoan qltk = new ucQuanLyTaiKhoan();
             tabTaiKhoan.Controls.Add(qltk);
             qltk.Dock = DockStyle.Fill;
+            ucQuanLyLoaiThu qllt = new ucQuanLyLoaiThu();
+            tabLoaiThu.Controls.Add(qllt);
+            qllt.Dock = DockStyle.Fill;
+            ucQuanLyLoaiChi qllc = new ucQuanLyLoaiChi();
+            tabLoaiChi.Controls.Add(qllc);
+            qllc.Dock = DockStyle.Fill;
         }
     }
 }

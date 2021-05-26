@@ -20,5 +20,15 @@ namespace QuanLyThuChi.Data
             MaLoaiChi = (int)data["MALOAICHI"];
             TenLoaiChi = data["TENLOAICHI"].ToString();
         }
+        public LoaiChi(string ten)
+        {
+            MaLoaiChi = 0;
+            TenLoaiChi = ten;
+        }
+        public LoaiChi(int ma, string ten)
+        {
+            MaLoaiChi = ma;
+            TenLoaiChi = ten;
+        }
     }
 }

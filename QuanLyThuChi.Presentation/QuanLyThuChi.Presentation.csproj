@@ -155,6 +155,18 @@
     <Compile Include="ucNhapThu.Designer.cs">
       <DependentUpon>ucNhapThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucQuanLyLoaiChi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucQuanLyLoaiChi.Designer.cs">
+      <DependentUpon>ucQuanLyLoaiChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucQuanLyLoaiThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucQuanLyLoaiThu.Designer.cs">
+      <DependentUpon>ucQuanLyLoaiThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucQuanLyTaiKhoan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -230,6 +242,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucNhapThu.resx">
       <DependentUpon>ucNhapThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucQuanLyLoaiChi.resx">
+      <DependentUpon>ucQuanLyLoaiChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucQuanLyLoaiThu.resx">
+      <DependentUpon>ucQuanLyLoaiThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucQuanLyTaiKhoan.resx">
       <DependentUpon>ucQuanLyTaiKhoan.cs</DependentUpon>

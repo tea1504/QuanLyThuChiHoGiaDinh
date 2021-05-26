@@ -43,5 +43,27 @@ namespace QuanLyThuChi.Business
             DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { id });
             return new LoaiChi(data.Rows[0]);
         }
+        public int ThemLoaiChi(LoaiChi lc)
+        {
+            int data = 0;
+            string query = "insert into LOAICHI(TENLOAICHI) values ( @a )";
+            DataProvider.Instance.ExecuteNonQuery(query, new object[] { lc.TenLoaiChi });
+            query = "select max(MALOAICHI) from LOAICHI";
+            data = (int)DataProvider.Instance.ExecuteScalar(query);
+            return data;
+        }
+        public int SuaLoaiChi(LoaiChi lc)
+        {
+            string query = "update LOAICHI set TENLOAICHI = @a where MALOAICHI = @b";
+            int data = DataProvider.Instance.ExecuteNonQuery(query, new object[] { lc.TenLoaiChi, lc.MaLoaiChi });
+            return data;
+        }
+        public int XoaLoaiChi(int id)
+        {
+            int data = 0;
+            string query = "delete from LOAICHI where MALOAICHI = @a";
+            data = DataProvider.Instance.ExecuteNonQuery(query, new object[] { id });
+            return data;
+        }
     }
 }
