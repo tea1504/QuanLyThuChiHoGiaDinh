@@ -136,7 +136,7 @@ namespace QuanLyThuChi.Business
         public List<String> timGhiChu(string ghichu)
         {
             List<string> list = new List<string>();
-            string query = "select GHICHUCHI from CHI WHERE GHICHUCHI like '%" + ghichu + "%'";
+            string query = "select GHICHUCHI from CHI WHERE GHICHUCHI like N'%" + ghichu + "%'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
